@@ -20,7 +20,14 @@ connection.connect(function(err) {
 
 // Perform a query
 //$query = 'SELECT * from info';
-$query = "INSERT INTO info (company, title, content, url, number) VALUES('CDP', 'Cyperpunk', 'Przesuwamy zaś', 'www.cdp.pl', '20/2021')";
+$query = "INSERT INTO info (company, title, content, url, number) VALUES('CDP', 'Cyperpunkl', 'Przesuwamy zaś', 'www.cdp.pl', '20/2021')";
+
+let url = 'www.cdp.pl';
+//$query = "if not exists (select * from info where info.url = 'www.cdp.pl') INSERT INTO info (company, title, content, url, number) VALUES('CDP', 'Cyperpunk', 'Przesuwamy zaś', 'www.cdp.pl', '20/2021')";
+
+$sql = "BEGIN IF NOT EXISTS (SELECT * FROM info WHERE info.url = 'www.cdp.pl') BEGIN INSERT INTO info (company, title, content, url, number) VALUES ('CDP', 'Cyperpunk', 'Przesuwamy zaś', 'www.cdp.pl', '20/2021') END END ";
+
+
 
 connection.query($query, function(err, rows, fields) {
     if(err){

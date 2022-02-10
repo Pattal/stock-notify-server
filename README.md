@@ -6,7 +6,7 @@
 * [Database](#database)
 
 ## General info
-The server application is divided into two parts. One of them (scraper) is responsible for obtaining stock exchange announcements from the PAP website and the names of companies listed on the WSE, and for placing this information in the database. The second part is an ordinary server with access points through which the application can obtain information from the database. 
+The project was an engineer work, therefore detailed information about it can be found in the work available on the platform. The server application is divided into two parts. One of them (scraper) is responsible for obtaining stock exchange announcements from the PAP website and the names of companies listed on the WSE, and for placing this information in the database. The second part is an ordinary server with access points through which the application can obtain information from the database. 
 	
 ## Technologies
 Project is created with:

@@ -29,7 +29,7 @@ con.connect((err) =>{
     }
 });
 
-app.get('/users',(req, res) => {
+app.get('/info',(req, res) => {
     con.query('SELECT * FROM info ORDER BY `date` DESC, `time` DESC LIMIT 50', (err, rows, fields) => {
         if(err) console.log(err);
         else {
